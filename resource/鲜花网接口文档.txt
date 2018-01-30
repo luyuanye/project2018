@@ -1,0 +1,34 @@
+node环境
+npm install express --save
+npm install body-parser --save
+npm install express-session --save
+npm install fs --save
+
+
+蛋糕列表接口
+type:get
+url:localhost:3000/cakes
+
+巧克力接口
+type:get
+url:localhost:3000/chocolates
+
+花接口
+type:get
+url:localhost:3000/flowers
+
+礼物接口
+type:get
+url:localhost:3000/gifts
+
+轮播图接口
+type:get
+url:localhost:3000/sliders
+
+登陆接口
+type:post
+url:localhost:3000/login
+
+注册接口
+type:post
+localhost:3000/register
