@@ -1,0 +1,11 @@
+git checkout -b dz1
+git add .
+git commit -m "...."
+git fetch
+git rebase -i origin/master
+i£¬esc  , :, q,
+git push origin dz1
+git checkout master
+git pull
+git merge dz1 --ff-only
+git push origin master
