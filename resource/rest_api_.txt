@@ -21,6 +21,10 @@ gifts list
 type:get
 url:localhost:3000/gifts
 
+recmond list
+type:get
+url:localhost:3000/recmond
+
 sliders list
 type:get
 url:localhost:3000/sliders

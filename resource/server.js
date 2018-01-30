@@ -51,6 +51,12 @@ app.get("/gifts", function (req, res) {
     res.json(gifts);
 });
 
+//推荐接口
+let recmond = require("./mock/recmond.json");
+app.get("/recmond", function (req, res) {
+    res.json(recmond);
+});
+
 //轮播图
 let sliders = require("./mock/sliders.json");
 app.get("/sliders", function (req, res) {
