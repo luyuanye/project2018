@@ -32,7 +32,7 @@ url:localhost:3000/sliders
 login
 type:post
 url:localhost:3000/login
-
+(argrment:{name:"xxxx",password:"xxxxx"})
 register
 type:post
 localhost:3000/register
