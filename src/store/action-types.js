@@ -1,1 +1,2 @@
-export const GET_CAKES = 'GET_CAKES'
+// 获取轮播图
+export const SET_SLIDERS = 'SET_SLIDERS'

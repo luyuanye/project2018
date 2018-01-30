@@ -14,7 +14,8 @@ let initState = {
 
 function home(state = initState, action) {
     switch (action.type) {
-        
+        case Types.SET_SLIDERS:
+            return ({...state, sliders: action.payload})
     }
     return state;
 }

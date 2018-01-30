@@ -8,6 +8,18 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_529429_qhgbctx9wom6ajor.css">
+    <script>
+        ~function () {
+            computedFont();
+            window.addEventListener('resize', computedFont, false);
+
+            function computedFont() {
+                var deviceW = document.documentElement.clientWidth;
+                if (deviceW > 640) return;
+                document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
+            }
+        }();
+    </script>
 </head>
 <body>
 <div id="root"></div>
