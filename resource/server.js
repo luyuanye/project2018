@@ -62,6 +62,13 @@ let sliders = require("./mock/sliders.json");
 app.get("/sliders", function (req, res) {
     res.json(sliders);
 });
+//获取所有用户
+app.get("/allUser", function (req, res) {
+   fs.readFile('test.txt', function (err, data) {
+      if (err)    return console.log(err);
+      res.json(  data.toString());
+  })
+});
 app.post('/login',function (req, res,next) {
     var body='';
     req.on('data', function (chunk) {
