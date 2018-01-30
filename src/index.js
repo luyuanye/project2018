@@ -7,6 +7,8 @@ import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import store from './store'
 
 
+
+
 // 组件
 import App from "./containers/App";
 import Home from "./containers/home/Home";
