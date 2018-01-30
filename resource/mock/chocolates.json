@@ -1,5 +1,6 @@
 [
   {
+  	"id":"1",
     "avatar": "../images/chocolates-1.jpg",
     "title": "奢悦之美巧克力礼盒",
     "hot": "",
@@ -21,6 +22,7 @@
     ]
   },
   {
+  	"id":"2",
     "avatar": "../images/chocolates-2.jpg",
     "title": "巧克巧蔻定制16粒装手工夹心巧克力",
     "hot": "",
@@ -44,6 +46,7 @@
     ]
   },
   {
+  	"id":"3",
     "avatar": "../images/chocolates-3.jpg",
     "title": "美满良缘 巧克力礼盒",
     "hot": "新款上线，限量抢购",
@@ -63,6 +66,7 @@
     ]
   },
   {
+  	"id":"4",
     "avatar": "../images/chocolates-4.jpg",
     "title": "凯雅Cailler精选黑巧克力礼盒 16块装",
     "hot": "原产地瑞士进口",
@@ -87,6 +91,7 @@
     ]
   },
   {
+  	"id":"5",
     "avatar": "../images/chocolates-5.jpg",
     "title": "凯雅Cailler臻选巧克力礼盒 16块装混合口味",
     "hot": "原产地瑞士进口",
@@ -108,6 +113,7 @@
     ]
   },
   {
+  	"id":"6",
     "avatar": "../images/chocolates-6.jpg",
     "title": "幻梦唯爱轻手工巧克力礼盒",
     "hot": "",
