@@ -33,6 +33,11 @@ login
 type:post
 url:localhost:3000/login
 (argrment:{name:"xxxx",password:"xxxxx"})
+{
+name:"xxxx",
+password:"xxxxx",
+phoneNumber:"xxxx"
+}
 
 register
 type:post

@@ -110,7 +110,7 @@ app.post('/register',function (req, res,next) {
      	console.log(JSON.stringify(body))
      	console.log(body);
         
-        res.json({"state":"success"});
+        res.json({"state":"success","user_info":JSON.stringify(body)});
     });
     
 });
