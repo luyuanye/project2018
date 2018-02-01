@@ -1,0 +1,55 @@
+.homeBox {
+  .home-swiper {
+    position: relative;
+    .dots{   
+      position: absolute;
+      width: 100%;
+      bottom: -10px;
+     
+      //height: 20px;
+      display: inline-block;
+      text-align: center;
+      left: 0;
+      span{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 3px;
+        &.active{
+          background: red;
+        }
+      }
+    }
+  }
+  .homeList {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #ffffff;
+    a {
+      text-align: center;
+      width: 33.33%;
+      float: left;
+      margin-top: .2rem;
+      i {
+        img {
+          width: 40px;
+        }
+      }
+      p {
+        font-size: .16rem;
+      }
+    }
+  }
+
+}
+
+.react-swipe-container {
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+

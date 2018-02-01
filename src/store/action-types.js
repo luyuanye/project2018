@@ -1,5 +1,8 @@
 import axios from "../api";
 
+export const SET_SLIDER = 'SET_SLIDER'
+
+export const SET_RECOMMREND = 'SET_RECOMMREND' // 设置课程数据
 
 
 //对数据进行排序

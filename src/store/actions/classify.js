@@ -5,11 +5,31 @@ import classify from "../reducers/classify";
 
 
 let actions = {
-    setgenre(val) {
-        console.log(val);
+
+    getIdcakesAPI(val) {
+        return function (dispatch, getState) { // redux-thunk
+            switch (val) {
+                case "cakes":
+                    dispatch({type: Types.GET_RECORD, payload: getcakes()});//蛋糕列表接口
+                    break;
+                case "chocolates":
+                    dispatch({type: Types.GET_RECORD, payload: getChocolates()});//蛋糕列表接口
+                    break;
+                case "flowers":
+
+                    dispatch({type: Types.GET_RECORD, payload: getFlowers()});//蛋糕列表接口
+                    break;
+                case "gifts":
+                    dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
+                    break;
+                case "recommends":
+                    dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
+                    break;
+
+            }
+        }
     },
     getcakesAPI() {
-
         return function (dispatch, getState) { // redux-thunk
             let {genre} = getState().classify;
             switch (genre) {
@@ -25,8 +45,14 @@ let actions = {
                 case "gifts":
                     dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
                     break;
+                case "recommends":
+                    dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
+                    break;
+
             }
         };
     },
+
+
 };
 export default actions;

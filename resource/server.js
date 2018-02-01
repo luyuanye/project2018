@@ -29,6 +29,7 @@ app.use(function (req, res, next) {
 
 //蛋糕列表接口
 let cakes = require("./mock/cakes.json");
+
 app.get("/cakes", function (req, res) {
     res.json(cakes);
 });
@@ -69,51 +70,15 @@ app.get("/allUser", function (req, res) {
       res.json(  data.toString());
   })
 });
-app.post('/login',function (req, res,next) {
-    var body='';
-    req.on('data', function (chunk) {
-        body += chunk;  
-        console.log("chunk:",chunk);
-        console.log("body:", body);
-        fs.writeFile(__dirname + '/test.txt',body, {flag: 'a'}, function (err) {
-        if(err) {
-        console.error(err);
-        } else {
-         console.log('写入成功');
-        }
-      });
-    });
-    req.on('end', function () {
-     	console.log(JSON.stringify(body))
-     	console.log(body);
-        
-        res.json({"state":"success"});
-    });
-    
-});
-//注册用户接口
-app.post('/register',function (req, res,next) {
-    var body='';
-    req.on('data', function (chunk) {
-        body += chunk;  
-        console.log("chunk:",chunk);
-        console.log("body:", body);
-        fs.writeFile(__dirname + '/test.txt',body, {flag: 'a'}, function (err) {
-        if(err) {
-        console.error(err);
-        } else {
-         console.log('写入成功');
-        }
-      });
-    });
-    req.on('end', function () {
-     	console.log(JSON.stringify(body))
-     	console.log(body);
-        
-        res.json({"state":"success","user_info":JSON.stringify(body)});
-    });
-    
-});
+app.post("/register", function (req, res) {
+  console.log(req.body);
+  res.send({"state":"success"});
+})
+app.post("/login", function (req, res) {
+  console.log(req.body);
+  
+  res.send({"登陆":(req.body)});
+})
 
 app.listen(3000, function () {
     console.log("端口 3000")
