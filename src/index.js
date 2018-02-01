@@ -32,11 +32,9 @@ ReactDOM.render(<Provider store={store}>
                     <Route path='/class' component={Class}/>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/personal' component={Personal} />
-
-
                     <Route path="/reg" component={Reg}/>
-                    <Route path="/classify" component={Classify}/>
-                    <Route path="/classifydetail/:id" component={Classifydetail}></Route>
+                    <Route path="/classify/:id"  component={Classify}/>
+                    <Route path="/classifydetail/:id"  component={Classifydetail}></Route>
                 </Switch>
             </App>
         </Router>

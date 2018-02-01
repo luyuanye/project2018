@@ -1,6 +1,6 @@
 import * as Types from "../action-types";
 
-import {getcakes, getChocolates, getFlowers, getGifts} from "../../api/classify";
+import {getcakes, getChocolates, getFlowers, getGifts,getRecommends} from "../../api/classify";
 import classify from "../reducers/classify";
 
 
@@ -23,16 +23,15 @@ let actions = {
                     dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
                     break;
                 case "recommends":
-                    dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
+                    dispatch({type: Types.GET_RECORD, payload: getRecommends()});//推荐
                     break;
 
             }
         }
     },
-    getcakesAPI() {
+    getcakesAPI(id) {
         return function (dispatch, getState) { // redux-thunk
-            let {genre} = getState().classify;
-            switch (genre) {
+            switch (id) {
                 case "cakes":
                     dispatch({type: Types.GET_RECORD, payload: getcakes()});//蛋糕列表接口
                     break;
@@ -46,7 +45,8 @@ let actions = {
                     dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
                     break;
                 case "recommends":
-                    dispatch({type: Types.GET_RECORD, payload: getGifts()});//蛋糕列表接口
+
+                    dispatch({type: Types.GET_RECORD, payload: getRecommends()});//蛋糕列表接口
                     break;
 
             }

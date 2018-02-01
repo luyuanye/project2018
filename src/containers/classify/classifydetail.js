@@ -3,6 +3,8 @@ import './index.less';
 import 'babel-polyfill';
 import actions from "../../store/actions/classify";
 import {connect} from "react-redux";
+import MTitle from "../../components/MTitle/MTitle";
+
 
 @connect(state => ({...state.classify}), actions)
 export default class Detail extends React.Component {
@@ -10,12 +12,12 @@ export default class Detail extends React.Component {
 
     constructor() {
         super();
+
         this.state = {a: true, path: [], exhibition:[]}
 
     };
 
     getgenre = (val) => {
-
         let ary = val.id.split('&');
         this.setState({path: ary})
         this.props.getIdcakesAPI(ary[0]);//获取数据
@@ -27,38 +29,22 @@ export default class Detail extends React.Component {
     };
 
     async componentWillMount() {
-
-        let detailList = this.props.location.state;
-        if (!this.detailList) {
-            console.log(this.props.location.state);
+        if (!this.props.location.state) {
             this.setState({a: false});
-            detailList = await this.getgenre(this.props.match.params)
+          await this.getgenre(this.props.match.params)
+        }else{
+            this.setState(this.props.location.state)
         }
 
-        /*
-        * {
-              "id":"1",
-            "avatar": "../images/cake-1.jpg",
-            "title": "果嘉年华(8寸)",
-            "hot": "元祖授权销售",放在title拼接的子
-            "detail": "元祖蛋糕",
-            "sales": 333, //销量
-            "price": 218,//最新价格
-            "discountprice": 218, //原来价格
-            "exhibition": [
-              "../images/cake-1-1.jpg",
-              "../images/cake-1-2.jpg",
-              "../images/cake-1-3.jpg"
-            ]
-          },*/
     }
 
     componentDidUpdate() {
         if (!this.state.a) {
             let curAry = this.props.commodity;
             let curValue = [];
-                curAry.forEach((item,index) => {
-                if (item.id == this.state.path[1]) {
+            console.log(curAry);
+            curAry.forEach((item,index) => {
+                    if (item.id == this.state.path[1]) {
                     curValue = item;
                     this.setState({a:true})
                 }
@@ -69,6 +55,7 @@ export default class Detail extends React.Component {
 
     render() {
         return <div className="detail">
+            <MTitle>{this.state.title}</MTitle>
                 {this.state.avatar?
                     <div className="detailHeader">
                     <img src={`http://cxyx.oss-cn-beijing.aliyuncs.com/${this.state.avatar}`} alt=""/>

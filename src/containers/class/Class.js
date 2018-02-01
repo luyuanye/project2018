@@ -21,19 +21,18 @@ export default class Class extends React.Component {
 
     render() {
         return (<div className="ClassList">
-            <Link to={'/'}><img src={img1} alt=""/></Link>
-            <Link to={'/2'}><img src={img2} alt=""/></Link>
-            <Link to={'/3'}><img src={img3} alt=""/></Link>
-            <Link to={'/4'}><img src={img4} alt=""/></Link>
-            <Link to={'/5'}><img src={img5} alt=""/></Link>
-            <Link to={'/6'}><img src={img6} alt=""/></Link>
-            <Link to={'/7'}><img src={img7} alt=""/></Link>
-            <Link to={'/8'}><img src={img8} alt=""/></Link>
-            <Link to={'/9'}><img src={img9} alt=""/></Link>
-            <Link to={'/10'}><img src={img10} alt=""/></Link>
-            <Link to={'/11'}><img src={img11} alt=""/></Link>
-            <Link to={'/12'}><img src={img12} alt=""/></Link>
-
+            <Link to={{pathname:`/classify/flowers`}} ><img src={img1} alt=""/></Link>
+            <Link to={{pathname:`/classify/cakes`}}><img src={img2} alt=""/></Link>
+            <Link to={{pathname:`/classify/gifts`}}><img src={img3} alt=""/></Link>
+            <Link to={{pathname:`/classify/chocolates`}}><img src={img4} alt=""/></Link>
+            <Link to={{pathname:`/classify/recommends`}}><img src={img5} alt=""/></Link>
+            <Link to={{pathname:`/classify/flowers`}}><img src={img6} alt=""/></Link>
+            <Link to={{pathname:`/classify/chocolates`}}><img src={img7} alt=""/></Link>
+            <Link to={{pathname:`/classify/cakes`}}><img src={img8} alt=""/></Link>
+            <Link to={{pathname:`/classify/recommends`}}><img src={img9} alt=""/></Link>
+            <Link to={{pathname:`/classify/cakes`}}><img src={img10} alt=""/></Link>
+            <Link to={{pathname:`/classify/flowers`}}><img src={img11} alt=""/></Link>
+            <Link to={{pathname:`/classify/chocolates`}}><img src={img12} alt=""/></Link>
 
 
         </div>)

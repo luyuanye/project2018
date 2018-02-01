@@ -18,13 +18,12 @@ export default class SortList extends React.Component {
           "../images/cake-1-3.jpg"
         ]
       },*/
-    enterDetail = (e) => {
-        console.log(e.target.parentNode);
-    };
+
 
     render() {
+
         return <div>
-            {this.props.recordList.map((item, index) => <Link key={index} className="sortList" onClick={this.enterDetail} to={{pathname:`/classifydetail/${this.props.name}&${item.id}`,state:item}}>
+            {this.props.recordList.map((item, index) => <Link key={index} className="sortList" to={{pathname:`/classifydetail/${this.props.name}&${item.id}`,state:item}}>
                 <img className="mainImg" src={`http://cxyx.oss-cn-beijing.aliyuncs.com/${item.avatar}`} alt=""/>
                 <p className="title">{item.title}</p>
                 <p className="price">￥{item.price}</p>

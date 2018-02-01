@@ -13,3 +13,7 @@ export function getFlowers() {//花接口
 export function getGifts() {//礼物接口
     return axios.get('/gifts')
 }
+
+export function getRecommends() {//礼物接口
+    return axios.get('/recommends')
+}

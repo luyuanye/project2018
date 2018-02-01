@@ -15,7 +15,8 @@ export default class Sort extends React.Component {
 
     };
     componentDidMount(){
-        this.props.getcakesAPI();//获取数据
+
+        this.props.getcakesAPI(this.props.match.params.id);//获取数据
      /*   let a = setInterval(()=>{
             console.log(this.props.commodity);
             clearInterval(a)
@@ -25,7 +26,7 @@ export default class Sort extends React.Component {
     return <div className="sort ">
         <MTitle>分类</MTitle>
         <ClassifyOption/>
-        <ClassifyList recordList = {this.props.commodity} name={this.props.genre} />
+        <ClassifyList name={this.props.match.params.id} recordList = {this.props.commodity}  />
     </div>
   }
 

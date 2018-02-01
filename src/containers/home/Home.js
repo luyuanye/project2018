@@ -27,6 +27,8 @@ export default class Home extends React.Component {
          {/*   <MTitle>首页</MTitle>*/}
             {this.props.sliders.length ? <HomeSlider list={this.props.sliders}/> : <Loading/>}
             <HomeList/>
+
+            <div className="recomend-title">推荐</div>
             <HomeRecommend recommend={this.props.recommend}/>
         </div>)
 
