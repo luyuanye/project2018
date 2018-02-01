@@ -1,0 +1,42 @@
+{"flag":true,	//	是否登陆了
+
+"userName":"43242314",//当前用户名
+
+
+
+"stateList":[
+
+
+{"userName":"43242314",
+
+"cart":[
+{"class":"recommends","avatar":"xianhua/images/cake-3.jpg","title":"诺心蛋糕","detail":"草莓拿破仑蛋糕（5-8人食）","price":298},
+{"class":"recommends","avatar":"xianhua/images/chocolates-1.jpg","title":"奢悦之美巧克力礼盒","detail":"夹心巧克力 ","price":18},
+{"class":"cakes","avatar":"xianhua/images/cake-4.jpg","title":"田园晓美","detail":"鲜奶蛋糕，布丁水果夹层(8寸)","price":218}]}
+]}
+
+
+
+
+
+{"class":"cakes",//类别
+
+"avatar":"xianhua/images/cake-4.jpg", 	  //前半段http://cxyx.oss-cn-beijing.aliyuncs.com/
+
+"title":"田园晓美",//标题
+"detail":"鲜奶蛋糕，布丁水果夹层(8寸)", //爱要不要
+
+"price":218  //价格
+ }
+]}
+
+
+
+类别列表：
+cakes//蛋糕列表接口
+chocolates//巧克力接口
+flowers//花接口
+gifts//礼物接口
+recommends//推荐
+
+

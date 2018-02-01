@@ -13,7 +13,7 @@ export default class Detail extends React.Component {
     constructor() {
         super();
 
-        this.state = {a: true, path: [], exhibition:[]}
+        this.state = {a: true, path: [], exhibition: []}
 
     };
 
@@ -31,8 +31,8 @@ export default class Detail extends React.Component {
     async componentWillMount() {
         if (!this.props.location.state) {
             this.setState({a: false});
-          await this.getgenre(this.props.match.params)
-        }else{
+            await this.getgenre(this.props.match.params)
+        } else {
             this.setState(this.props.location.state)
         }
 
@@ -42,33 +42,100 @@ export default class Detail extends React.Component {
         if (!this.state.a) {
             let curAry = this.props.commodity;
             let curValue = [];
-            console.log(curAry);
-            curAry.forEach((item,index) => {
-                    if (item.id == this.state.path[1]) {
+            curAry.forEach((item, index) => {
+                if (item.id == this.state.path[1]) {
                     curValue = item;
-                    this.setState({a:true})
+                    this.setState({a: true})
                 }
             });
             this.setState(curValue)
         }
     }
 
+    addShop = () => {
+        let loState = localStorage.getItem("state");
+        let userState = true;//先假设用户已经登陆
+        if (loState) {
+            !JSON.parse(loState).flag ? userState = false : null;
+        } else {
+            userState = false
+        }
+        if (!userState) {
+            this.props.history.location.pathname = "";
+            this.props.history.push('/login')
+        } else {
+            let curContent = JSON.parse(loState);// {"flag":true,"userName":"435","stateList":[]}
+            let {userName, stateList} = curContent;
+            let curState = this.state;//当前页面的详细信息；
+            let kkary = this.props.match.params.id.split('&');
+            let conState = {
+                userName,   //  新的当前购物车信息
+                cart: [{
+                    class:kkary[0],
+                    avatar: curState.avatar,
+                    title: curState.title,
+                    detail: curState.detail,
+                    price: curState.price,
+                    number:1,
+                    isBuy:true
+                }]
+            };
+            let curConState = {
+                class:kkary[0],
+                avatar: curState.avatar,
+                title: curState.title,
+                detail: curState.detail,
+                price: curState.price,
+                number:1,
+                isBuy:true
+            }
+
+            let kk = false;
+
+            stateList.forEach((item, index) => {
+
+                if (userName == item.userName) {
+                    //里面已经有当前用户的记录了，
+                    kk = true;
+                    let curkk = false
+                    item.cart.forEach((item, index) => {
+                        if (item.title == this.state.title) {
+                            curkk = true;
+                            return
+                        }
+                    });
+                    if (!curkk) {
+                        item.cart.push(curConState);
+                        localStorage.setItem("state",JSON.stringify(curContent));
+                    }
+
+
+                    return false;
+                }
+            });
+            if (!kk) {
+                stateList.push(conState);
+                localStorage.setItem("state",JSON.stringify(curContent));
+            }
+        }
+    };
+
     render() {
         return <div className="detail">
             <MTitle>{this.state.title}</MTitle>
-                {this.state.avatar?
-                    <div className="detailHeader">
+            {this.state.avatar ?
+                <div className="detailHeader">
                     <img src={`http://cxyx.oss-cn-beijing.aliyuncs.com/${this.state.avatar}`} alt=""/>
-                        <div className="operate">
+                    <div className="operate">
                         <p className="title">{this.state.title} <span>{this.state.detail}</span></p>
                         <span className="price">￥{this.state.price}</span>
                         <span className="discountprice">￥{this.state.discountprice}</span>
                         <span className="sales">{this.state.sales}人已付款</span>
-                        </div>
-                        <a  className='addShopping' href="javascript:;">加入购物车</a>
-                    </div> : ""}
+                    </div>
+                    <a className='addShopping' href="javascript:;" onClick={this.addShop}>加入购物车</a>
+                </div> : ""}
             {this.state.exhibition.map((item, index) => <div className="introduce" key={index}>
-                <img src={`http://cxyx.oss-cn-beijing.aliyuncs.com/${item}`} alt=""/>
+                    <img src={`http://cxyx.oss-cn-beijing.aliyuncs.com/${item}`} alt=""/>
                 </div>
             )}
 
