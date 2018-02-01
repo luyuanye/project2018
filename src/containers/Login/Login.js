@@ -29,7 +29,14 @@ export default class Login extends Component {
             password=this.password.value;
         if(userName!==""&&password!==""){
             this.props.getLogin(userName,password,this.props.history);
-            localStorage.setItem("flag",true)
+            let state=localStorage.getItem("state");
+            if(state){
+                state=JSON.parse(state);
+                state={flag:true,userName,stateList:state.stateList};
+            }else {
+                state={flag:true,userName,stateList:[]}
+            }
+            localStorage.setItem("state",JSON.stringify(state))
         }
     }
 }

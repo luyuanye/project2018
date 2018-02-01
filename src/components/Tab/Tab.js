@@ -17,10 +17,15 @@ export default class Tab extends React.Component {
         </div>)
     }
     componentDidMount(){
-      let flag=localStorage.getItem("flag");
-        if(!flag){
-            this.setState({flag:"/login"})
-        }
+      let state=localStorage.getItem("state");
+      if(state){
+          state= JSON.parse(state);
+          if(!state.flag){
+              this.setState({flag:"/login"})
+          }
+      }else {
+          this.setState({flag:"/login"})
+      }
     }
 
 }
