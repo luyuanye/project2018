@@ -24,6 +24,7 @@ import Reg from "./containers/Reg/Reg";
 import Classify from "./containers/classify/Classify"
 import Classifydetail from "./containers/classify/classifydetail";
 
+
 ReactDOM.render(<Provider store={store}>
         <Router>
             <App>
@@ -33,10 +34,11 @@ ReactDOM.render(<Provider store={store}>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/personal' component={Personal} />
                     <Route path="/reg" component={Reg}/>
+                    <Route path="/login" component={Login}/>
                     <Route path="/classify/:id"  component={Classify}/>
                     <Route path="/classifydetail/:id"  component={Classifydetail}></Route>
                 </Switch>
             </App>
         </Router>
     </Provider>
-    , document.getElementById('root'))
+    , document.getElementById('root'));

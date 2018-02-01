@@ -5,6 +5,10 @@ export const SET_SLIDER = 'SET_SLIDER'
 export const SET_RECOMMREND = 'SET_RECOMMREND' // 设置课程数据
 
 
+//注册
+export const SET_REGISTER="SET_REGISTER";
+export const SET_LOGIN="SET_LOGIN";
+
 //对数据进行排序
 export const GET_PRICE="GET_PRICE";
 export const GET_SALES="GET_SALES";
