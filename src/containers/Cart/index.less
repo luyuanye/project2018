@@ -1,0 +1,194 @@
+body {
+  background: #f2f3f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.head1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #a9aaab;
+  background: #fff;
+  z-index: 998;
+  .headline {
+    font-size: .3rem;
+    color: #7a7a83;
+    text-align: center;
+    margin-left: .8rem;
+    padding: .2rem 0 .15rem;
+    overflow: hidden;
+
+    .redact-right {
+      font-size: .3rem;
+      float: right;
+      margin-right: .35rem;
+      color: #4f4f58;
+    }
+  }
+
+}
+
+.main1 {
+  width: 100%;
+  height: 100%;
+
+  .title {
+    font-size: .2rem;
+    color: #6d6d72;
+    padding: .1rem 0 .1rem .1rem;
+  }
+
+  .increase {
+    width: 100%;
+    height: 1.8rem;
+    background: #fff;
+    border-top: 1px solid #c8c7cc;
+    border-bottom: 1px solid #c8c7cc;
+    margin-bottom: .1rem;
+    position: relative;
+    overflow: hidden;
+    .list-flower {
+      position: absolute;
+      top: .08rem;
+      left: .2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .Selection {
+      width: 1rem;
+      height: .35rem;
+      position: absolute;
+      top: 1.2rem;
+      left: .4rem;
+    }
+    .center-price {
+      height: 1.8rem;
+      width: 3rem;
+      margin-left: 2rem;
+      float: left;
+
+      h1 {
+        font-size: .3rem;
+        color: #4f4f58;
+        padding-top: .24rem;
+        width: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+      }
+      p {
+        font-size: .2rem;
+        color: #acacba;
+        width: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      h2 {
+        padding-top: .3rem;
+        font-size: .24rem;
+        color: #4f4f58;
+        width: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .add-subtract {
+      float: right;
+      width: .65rem;
+      height: 1rem;
+      margin-right: .3rem;
+
+      .add {
+        display: block;
+        border: 1px solid #dddfe3;
+        border-radius: 50%;
+        width: .7rem;
+        height: .7rem;
+        line-height: .7rem;
+        font-size: .4rem;
+        text-align: center;
+        margin: .1rem auto 0;
+      }
+      .subtract {
+        display: block;
+        border: 1px solid #dddfe3;
+        border-radius: 50%;
+        width: .7rem;
+        height: .7rem;
+        line-height: .7rem;
+        font-size: .4rem;
+        text-align: center;
+        margin: .17rem auto 0;
+      }
+    }
+  }
+}
+
+.footer1 {
+  background: #fff;
+  height: 1.3rem;
+  width: 100%;
+  position: fixed;
+  bottom: .9rem;
+  left: 0;
+  border-top: 1px solid #e5e5e5;
+
+  .footer-top {
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    .check-all {
+      width: 1.5rem;
+      height: .5rem;
+      font-size: .2rem;
+      text-align: center;
+      line-height: .5rem;
+      color: #e5e5e5;
+      border-right: 1px solid #e5e5e5;
+    }
+    .sum {
+      width: 100%;
+      height: .5rem;
+      position: absolute;
+      top: 0;
+      left: 1.51rem;
+      font-size: .2rem;
+      line-height: .5rem;
+      span {
+        position: fixed;
+        right: .1rem;
+        bottom: 1.7rem;
+        color: #7a7a83;
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    height: 1.33rem;
+
+    .select {
+      display: block;
+      width: 2.8rem;
+      height: .4rem;
+      text-align: center;
+      font-size: .2rem;
+      background: #d9dbdf;
+      margin: .2rem auto;
+      line-height: .4rem;
+      border-radius: .4rem;
+      color: #fbfcfd;
+    }
+    .select-color {
+      background: #df5000;
+    }
+  }
+}

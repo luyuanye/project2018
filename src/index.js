@@ -11,7 +11,7 @@ import store from './store'
 // 组件
 import App from "./containers/App";
 import Home from "./containers/home/Home";
-import Cart from "./containers/cart/Cart";
+import Cart from "./containers/Cart/Cart";
 import Personal from "./containers/personal/Personal";
 import Class from "./containers/class/Class";
 

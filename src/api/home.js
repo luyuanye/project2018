@@ -7,3 +7,7 @@ export function getSliders() {
 export function getRecommend() {
     return axios.get('/recommends')
 }
+export function getCartData(id) {
+    // return axios.get(`/cart/${id}`);
+    return axios.get(`/cart`);
+}

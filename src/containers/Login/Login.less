@@ -2,7 +2,8 @@ input{
   outline:none
 }
 .loginBox{
-
+  position: relative;
+  top: .2rem;
   width: 6.4rem;
   .loginTxt{
     width: 100%;
@@ -34,10 +35,16 @@ input{
   }
   .hint{
     font-size: .20rem;
-    color: #b5cf7c;
-    display: block;
     text-align: left;
     margin: .2rem 0 0 .4rem;
+    display: none;
+    &.select{
+      color: #e96513;
+      display: block;
+    }&.suc{
+      color: #A8D732;
+           display: block;
+         }
   }
   .login,.reg{
     outline:none;

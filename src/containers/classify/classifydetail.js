@@ -88,7 +88,7 @@ export default class Detail extends React.Component {
                 price: curState.price,
                 number:1,
                 isBuy:true
-            }
+            };
 
             let kk = false;
 
@@ -97,7 +97,7 @@ export default class Detail extends React.Component {
                 if (userName == item.userName) {
                     //里面已经有当前用户的记录了，
                     kk = true;
-                    let curkk = false
+                    let curkk = false;
                     item.cart.forEach((item, index) => {
                         if (item.title == this.state.title) {
                             curkk = true;
@@ -107,6 +107,8 @@ export default class Detail extends React.Component {
                     if (!curkk) {
                         item.cart.push(curConState);
                         localStorage.setItem("state",JSON.stringify(curContent));
+                        this.props.history.location.pathname = "";
+                        this.props.history.push('/cart')
                     }
 
 
@@ -116,7 +118,10 @@ export default class Detail extends React.Component {
             if (!kk) {
                 stateList.push(conState);
                 localStorage.setItem("state",JSON.stringify(curContent));
+                this.props.history.location.pathname = "";
+                this.props.history.push('/cart')
             }
+
         }
     };
 

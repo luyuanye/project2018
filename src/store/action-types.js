@@ -22,4 +22,18 @@ export const GET_CHOCOLATES="GET_CHOCOLATES";//巧克力接口
 export const GET_FLOWERS="GET_FLOWERS";//花接口
 export const GET_GIFTS="GET_GIFTS";//礼物接口
 
+//获取购物车商品数据
+export const GET_CART = 'GET_CART';
 
+//增加商品数量
+export const CART_NUM = 'CART_NUM';
+
+//减少商品数量subtract
+export const SUBTRACT_NUM = 'SUBTRACT_NUM';
+
+
+//是否购此商品买商品
+export const ISBUY = 'ISBUY';
+
+//商品全选；
+export const ALL_CHECK = "ALL_CHECK";
