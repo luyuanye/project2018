@@ -1,7 +1,7 @@
 <template>
   <div>
   	<mt-header fixed title="鲜花网管理后台"></mt-header>
-  
+      <PartEA />
     <mt-tabbar v-model="selected">
      <mt-tab-item id="外卖">
       <img slot="icon" src="../assets/logo.png">
